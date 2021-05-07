@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form validation 2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="main">
+    <form action="" id="form-1" class="form">
+      <h3 class="heading">Đăng ký thành viên</h3>
+      <div class="spacer"> </div>
+
+      <div class="form-group">
+        <label for="fullname" class="form-label">Họ tên đầy đủ</label>
+        <input type="text" class="form-control" id="fullname" name="fullname" rules="required"
+          placeholder="VD: Tâm Hoàng">
+        <span class="form-message"></span>
+      </div>
+      <div class="form-group">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email" rules="required|email"
+          placeholder="VD: tamhoangweb@gmail.com">
+        <span class="form-message"></span>
+      </div>
+      <div class="form-group">
+        <label for="password" class="form-label">Nhập mật khẩu</label>
+        <input type="password" class="form-control" id="password" name="password" rules="required|min:6">
+        <span class="form-message"></span>
+      </div>
+
+
+      <button class="form-submit">Đăng ký</button>
+    </form>
+  </div>
+
+  <script src="./validator.js"></script>
+  <script>
+    Validator('#form-1')
+  </script>
+</body>
+
+</html>
